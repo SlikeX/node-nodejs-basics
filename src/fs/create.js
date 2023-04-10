@@ -10,8 +10,7 @@ const create = async () => {
     try {
         await writeFile(url, str, {flag: 'wx'})
     }catch (err){
-        console.log(err);
-        throw Error (errMsg)
+        throw new Error(errMsg)
     }
 };
 function getPath() {

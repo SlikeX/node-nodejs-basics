@@ -14,8 +14,7 @@ const copy = async () => {
         })
         await cp(src, copy, {errorOnExist:true, recursive:true, force:false})
     }catch (err){
-        console.log(err);
-        throw Error (errMsg)
+        throw new Error(errMsg)
     }
 };
 function getFullPath(path) {

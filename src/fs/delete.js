@@ -10,8 +10,7 @@ const remove = async () => {
     try {
         await unlink(url)
     }catch (err){
-        console.log(err);
-        throw Error (errMsg)
+        throw new Error(errMsg)
     };
 };
 function getFullPath(path) {

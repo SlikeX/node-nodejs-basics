@@ -6,9 +6,9 @@ const str = 'I am fresh and young';
 const errMsg = 'FS operation failed';
 
 const create = async () => {
-    const url = getPath();
+    const href = getPath();
     try {
-        await writeFile(url, str, {flag: 'wx'})
+        await writeFile(href, str, {flag: 'wx'})
     }catch (err){
         throw new Error(errMsg)
     }

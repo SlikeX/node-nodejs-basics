@@ -1,12 +1,13 @@
 import { readdir} from 'node:fs/promises';
+import { URL } from 'node:url';
 
 const errMsg = 'FS operation failed';
 const path = 'files';
 
 const list = async () => {
-    const url = getFullPath(path);
+    const href = getFullPath(path);
     try {
-        const files = await readdir(url)
+        const files = await readdir(href)
         files.forEach((file)=>{
             console.log(file);
         })

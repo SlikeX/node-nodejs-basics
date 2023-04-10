@@ -6,9 +6,9 @@ const errMsg = 'FS operation failed';
 const path = 'files';
 
 const remove = async () => {
-    const url = getFullPath(`${path}/${fileName}`);
+    const href = getFullPath(`${path}/${fileName}`);
     try {
-        await unlink(url)
+        await unlink(href)
     }catch (err){
         throw new Error(errMsg)
     };

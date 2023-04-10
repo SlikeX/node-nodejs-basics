@@ -11,8 +11,7 @@ const read = async () => {
         let content = await readFile(href, 'utf-8')
         console.log(content);
     }catch (err){
-        console.log(err);
-        throw Error (errMsg)
+        throw new Error (errMsg)
     }
 };
 function getFullPath(path) {

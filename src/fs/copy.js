@@ -3,7 +3,7 @@ import {cp} from 'fs/promises';
 
 const fileName = 'files_copy';
 const errMsg = 'FS operation failed';
-const path = 'files'
+const path = 'files';
 
 const copy = async () => {
     const src = getFullPath(path);
